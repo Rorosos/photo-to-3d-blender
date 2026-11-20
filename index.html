@@ -30,6 +30,8 @@
     .card p{margin:0;color:var(--muted)}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
     .gallery figure{border:1px solid var(--line);overflow:hidden;border-radius:.8rem;background:var(--surface)}
     .gallery img{aspect-ratio:1;object-fit:contain;background:#5f6977}.gallery figcaption{padding:.55rem .8rem;color:var(--muted)}
+    .blender-demo{margin-top:2rem;max-width:54rem}.blender-demo figure{border:1px solid var(--line);border-radius:.8rem;background:var(--surface)}
+    .blender-demo a{display:block}.blender-demo img{border-radius:.75rem .75rem 0 0}.blender-demo figcaption{padding:.55rem .8rem;color:var(--muted)}
     .guide{display:grid;grid-template-columns:1.35fr 1fr;gap:2rem;align-items:start}.guide ol{margin:0;padding-left:1.4rem}.guide li+li{margin-top:.75rem}
     .fine{font-size:.9rem;color:var(--muted)}.guide aside p+p{margin-top:.8rem}.licenses{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem 2rem}
     .license{border-top:1px solid var(--line);padding:.8rem 0}.license dt{font-weight:700}.license dd{margin:.2rem 0 0;color:var(--muted)}
@@ -59,7 +61,7 @@
     <section class="section"><div class="wrap">
       <h2>From reference to editable asset</h2>
       <div class="features">
-        <article class="card"><h3>Start with a photo</h3><p>Load a JPG or PNG. With Hunyuan3D, add front, left, and back references for multi-view reconstruction.</p></article>
+        <article class="card"><h3>Drag and drop photos</h3><p>Drop a JPG or PNG onto <strong>Choose photo</strong> or a photo preview in Blender. Hunyuan3D also supports front, left, and back references.</p></article>
         <article class="card"><h3>Build a queue</h3><p>Queue photos and seed variants. Follow progress, cancel a job, or retry it from the sidebar.</p></article>
         <article class="card"><h3>Use your result</h3><p>Import the FBX into your scene or open its output folder to find the preview and any texture maps.</p></article>
         <article class="card"><h3>Choose an engine</h3><p>TRELLIS.2 creates materials. Hunyuan3D supports single and multiple views, with optional Hunyuan Paint.</p></article>
@@ -76,6 +78,13 @@
         <figure><img src="./burger-side.png" width="432" height="432" loading="lazy" alt="Alternate view of the same textured 3D burger"><figcaption>Generated model · alternate view</figcaption></figure>
       </div>
       <p class="fine">Input photo from the <a href="https://github.com/VAST-AI-Research/TripoSR/tree/main/examples">TripoSR examples</a>. The generation shown here used TRELLIS.2.</p>
+      <div class="blender-demo">
+        <h3>Generated chair in Blender</h3>
+        <figure>
+          <a href="./blender-chair-queue.png" aria-label="Open the full-size Blender screenshot"><img src="./blender-chair-queue.png" width="865" height="831" loading="lazy" alt="A generated chair in the Blender viewport beside completed Hunyuan3D and TRELLIS.2 jobs"></a>
+          <figcaption>The Blender sidebar shows previews for both completed jobs.</figcaption>
+        </figure>
+      </div>
     </div></section>
     <section class="section" id="install"><div class="wrap">
       <h2>Install and generate</h2>
@@ -84,7 +93,7 @@
           <li>Download the ZIP. In Blender, open <strong>Edit → Preferences → Add-ons → Install from Disk</strong> and select the ZIP.</li>
           <li>Press <strong>N</strong> in the 3D Viewport and open <strong>Photo to 3D</strong>. Choose a language and an engine.</li>
           <li>Click <strong>Download components</strong>. In the <strong>Components</strong> tab, you can download individual environments and weights.</li>
-          <li>Load a photo and click <strong>Add to queue</strong>. After generation, use <strong>Import into scene</strong> or open the job folder.</li>
+          <li>In <strong>Generate → Single photo</strong>, click <strong>Choose photo</strong> or drop images onto the button or a photo preview. Click <strong>Add to queue</strong>. After generation, use <strong>Import into scene</strong> or open the job folder.</li>
         </ol>
         <aside class="card"><h3>Component access</h3><p>The compact ZIP includes an example. Model weights and CUDA environments download on demand.</p><p>Enable online access in <strong>Preferences → System → Network</strong>. For gated DINOv3 and RMBG-2.0 weights, request access from the providers and enter a Hugging Face read token in the Components tab. RMBG-2.0 is optional when background removal is disabled.</p></aside>
       </div>
