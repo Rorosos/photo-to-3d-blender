@@ -54,7 +54,7 @@
         <p class="intro">Turn a reference photo into a 3D asset. Run TRELLIS.2 or Hunyuan3D on your own GPU, preview the result in Blender, and export an FBX with texture files when available.</p>
         <p class="vibe">This project is pure vibe coding.</p>
         <div class="actions"><a class="button" href="./photo-to-3d-windows.zip" download>Download for Windows</a><a class="button secondary" href="#install">Installation guide</a></div>
-        <p class="spec">Blender 5.3+ · Windows x64 · NVIDIA CUDA</p>
+        <p class="spec">v1.7.0 · Blender 5.3+ · Windows x64 · NVIDIA CUDA</p>
       </div>
       <figure class="main-render"><img src="./burger-render.png" width="432" height="432" alt="Rendered TRELLIS.2 reconstruction of a burger on a plate"><figcaption>A textured TRELLIS.2 result rendered in Blender.</figcaption></figure>
     </section>
@@ -65,7 +65,7 @@
         <article class="card"><h3>Build a queue</h3><p>Queue photos and seed variants. Follow progress, cancel a job, or retry it from the sidebar.</p></article>
         <article class="card"><h3>Use your result</h3><p>Import the FBX into your scene or open its output folder to find the preview and any texture maps.</p></article>
         <article class="card"><h3>Choose an engine</h3><p>TRELLIS.2 creates materials. Hunyuan3D supports single and multiple views, with optional Hunyuan Paint.</p></article>
-        <article class="card"><h3>Install what you need</h3><p>Download environments and model weights from Blender. Use the Components tab to add more later.</p></article>
+        <article class="card"><h3>Install in one click</h3><p>Choose a model and download its weights, engine, and libraries together in Blender. Use the Components tab to add another model later.</p></article>
         <article class="card"><h3>Work locally</h3><p>Inference runs on your computer. Internet access is needed to download components.</p></article>
       </div>
     </div></section>
@@ -92,10 +92,10 @@
         <ol>
           <li>Download the ZIP. In Blender, open <strong>Edit → Preferences → Add-ons → Install from Disk</strong> and select the ZIP.</li>
           <li>Press <strong>N</strong> in the 3D Viewport and open <strong>Photo to 3D</strong>. Choose a language and an engine.</li>
-          <li>Click <strong>Download components</strong>. In the <strong>Components</strong> tab, you can download individual environments and weights.</li>
+          <li>Click <strong>Download model and engine</strong>. Blender installs the selected model and its dependencies. Open <strong>Components</strong> to add another model or Hunyuan Paint.</li>
           <li>In <strong>Generate → Single photo</strong>, click <strong>Choose photo</strong> or drop images onto the button or a photo preview. Click <strong>Add to queue</strong>. After generation, use <strong>Import into scene</strong> or open the job folder.</li>
         </ol>
-        <aside class="card"><h3>Component access</h3><p>The compact ZIP includes an example. Model weights and CUDA environments download on demand.</p><p>Enable online access in <strong>Preferences → System → Network</strong>. For gated DINOv3 and RMBG-2.0 weights, request access from the providers and enter a Hugging Face read token in the Components tab. RMBG-2.0 is optional when background removal is disabled.</p></aside>
+        <aside class="card"><h3>Downloads in Blender</h3><p>Enable online access in <strong>Preferences → System → Network</strong>. Blender downloads public component files without an account, access request, or token.</p><p>TRELLIS.2 uses the original DINOv3 ViT-L/16 and optional BiRefNet HR-matting for local background removal.</p></aside>
       </div>
     </div></section>
     <section class="section" id="licenses"><div class="wrap">
@@ -104,7 +104,7 @@
       <dl class="licenses">
         <div class="license"><dt>TRELLIS.2 and its Windows adaptation</dt><dd>MIT. Preserve upstream notices when redistributing. <a href="https://github.com/microsoft/TRELLIS.2/blob/main/LICENSE">Microsoft license</a> · <a href="https://github.com/andrakis/TRELLIS.2-stableprojectorz/blob/main/LICENSE">Windows adaptation</a></dd></div>
         <div class="license"><dt>Hunyuan3D 2.0</dt><dd>Tencent’s community agreement has territorial and usage limits. The EU, United Kingdom, and South Korea are outside its licensed territory. <a href="https://github.com/Tencent-Hunyuan/Hunyuan3D-2/blob/main/LICENSE">Tencent agreement</a></dd></div>
-        <div class="license"><dt>DINOv3 and RMBG-2.0</dt><dd>DINOv3 uses Meta’s model license. RMBG-2.0 weights are offered under CC BY-NC 4.0. Commercial use of those weights requires separate authorization. <a href="https://github.com/facebookresearch/dinov3/blob/main/LICENSE.md">DINOv3 terms</a> · <a href="https://huggingface.co/briaai/RMBG-2.0">RMBG-2.0 terms</a></dd></div>
+        <div class="license"><dt>DINOv3 and BiRefNet HR-matting</dt><dd>DINOv3 uses Meta’s model license. BiRefNet HR-matting is available under MIT. <a href="https://github.com/facebookresearch/dinov3/blob/main/LICENSE.md">DINOv3 terms</a> · <a href="https://huggingface.co/ZhengPeng7/BiRefNet_HR-matting">BiRefNet model card</a></dd></div>
         <div class="license"><dt>NVIDIA rasterization dependencies</dt><dd>The supplied dependency versions have research and evaluation terms. Review them before commercial use. <a href="https://github.com/NVlabs/nvdiffrast/blob/main/LICENSE.txt">nvdiffrast</a> · <a href="https://github.com/NVlabs/nvdiffrec/blob/main/LICENSE.txt">nvdiffrec</a></dd></div>
       </dl>
     </div></section>
