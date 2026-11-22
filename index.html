@@ -45,7 +45,7 @@
 <body>
   <header><div class="wrap nav">
     <a class="brand" href="#"><i aria-hidden="true"></i>Photo to 3D</a>
-    <nav aria-label="Main navigation"><a href="#demo">Demo</a><a href="#install">Install</a><a href="#licenses">Licenses</a><a href="https://github.com/Rorosos/photo-to-3d-blender">GitHub</a></nav>
+    <nav aria-label="Main navigation"><a href="#demo">Demo</a><a href="#requirements">Requirements</a><a href="#install">Install</a><a href="#licenses">Licenses</a><a href="https://github.com/Rorosos/photo-to-3d-blender">GitHub</a></nav>
   </div></header>
   <main>
     <section class="wrap hero" aria-labelledby="title">
@@ -54,7 +54,7 @@
         <p class="intro">Turn a reference photo into a 3D asset. Run TRELLIS.2 or Hunyuan3D on your own GPU, preview the result in Blender, and export an FBX with texture files when available.</p>
         <p class="vibe">This project is pure vibe coding.</p>
         <div class="actions"><a class="button" href="./photo-to-3d-windows.zip" download>Download for Windows</a><a class="button secondary" href="#install">Installation guide</a></div>
-        <p class="spec">v1.7.1 · Blender 5.3+ · Windows x64 · NVIDIA CUDA</p>
+        <p class="spec">v1.8.0 · Blender 5.3+ · Windows x64 · NVIDIA CUDA</p>
       </div>
       <figure class="main-render"><img src="./burger-render.png" width="432" height="432" alt="Rendered TRELLIS.2 reconstruction of a burger on a plate"><figcaption>A textured TRELLIS.2 result rendered in Blender.</figcaption></figure>
     </section>
@@ -62,7 +62,7 @@
       <h2>From reference to editable asset</h2>
       <div class="features">
         <article class="card"><h3>Drop or paste photos</h3><p>Drop a JPG or PNG onto <strong>Choose photo</strong> or a preview. Paste copied images and screenshots, including into individual Hunyuan3D view slots.</p></article>
-        <article class="card"><h3>Build a queue</h3><p>Queue photos and seed variants. Follow progress, cancel a job, or retry it from the sidebar.</p></article>
+        <article class="card"><h3>Build a queue</h3><p>Track downloads by bytes and installed components. Follow generation stages and sampling steps, or cancel and retry jobs from the sidebar.</p></article>
         <article class="card"><h3>Use your result</h3><p>Import the FBX into your scene or open its output folder to find the preview and any texture maps.</p></article>
         <article class="card"><h3>Choose an engine</h3><p>TRELLIS.2 creates materials. Hunyuan3D supports single and multiple views, with optional Hunyuan Paint.</p></article>
         <article class="card"><h3>Install in one click</h3><p>Choose a model and download its weights, engine, and libraries together in Blender. Use the Components tab to add another model later.</p></article>
@@ -85,6 +85,17 @@
           <figcaption>The Blender sidebar shows previews for both completed jobs.</figcaption>
         </figure>
       </div>
+    </div></section>
+    <section class="section" id="requirements"><div class="wrap">
+      <h2>System requirements</h2>
+      <p class="lede">Tested with Blender 5.3 on Windows 11 x64, an RTX 4060 Ti with 8 GB VRAM, a Ryzen 7 5700X, and 32 GB RAM.</p>
+      <ul>
+        <li><strong>GPU.</strong> Start with an NVIDIA RTX GPU with 8 GB VRAM for low-memory profiles. Prefer 12–16 GB for more headroom, especially with Hunyuan Paint.</li>
+        <li><strong>Driver.</strong> Use a current NVIDIA Windows driver compatible with CUDA 12.8. Version 572.61 or later is a practical baseline.</li>
+        <li><strong>CPU and memory.</strong> A modern 6-core CPU and 32 GB RAM are good starting points.</li>
+        <li><strong>SSD space.</strong> Allow about 25 GB free for a basic profile or 60 GB for both engines, optional weights, and download cache.</li>
+      </ul>
+      <p class="fine">Memory use varies by model, settings, and other apps. See the <a href="https://github.com/andrakis/TRELLIS.2-stableprojectorz">Windows TRELLIS.2 fork</a>, <a href="https://github.com/Tencent-Hunyuan/Hunyuan3D-2#-models-zoo">Hunyuan3D documentation</a>, and <a href="https://docs.nvidia.com/cuda/archive/12.8.1/cuda-toolkit-release-notes/">CUDA 12.8 driver notes</a>.</p>
     </div></section>
     <section class="section" id="install"><div class="wrap">
       <h2>Install and generate</h2>
