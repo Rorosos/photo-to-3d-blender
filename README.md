@@ -4,7 +4,7 @@ Generate textured 3D assets from reference photos with TRELLIS.2 and Hunyuan3D, 
 
 AI-assisted coding
 
-[Project website](https://rorosos.github.io/photo-to-3d-blender/) · [Download v1.8.0 for Windows](./photo-to-3d-windows.zip) · [Component terms](./THIRD_PARTY_NOTICES.md)
+[Project website](https://rorosos.github.io/sard-3d-generator-photo-to-3d-blender/) · [Download v1.8.0 for Windows](./photo-to-3d-windows.zip) · [Component terms](./THIRD_PARTY_NOTICES.md)
 
 ![Rendered TRELLIS.2 reconstruction of a burger on a plate](./burger-render.png)
 
