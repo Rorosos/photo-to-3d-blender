@@ -1,8 +1,8 @@
-# Photo to 3D for Blender
+# SARD 3D Generator
 
 Generate textured 3D assets from reference photos with TRELLIS.2 and Hunyuan3D, then import or export them from Blender.
 
-*This project is pure vibe coding.*
+AI-assisted coding
 
 [Project website](https://rorosos.github.io/photo-to-3d-blender/) · [Download v1.8.0 for Windows](./photo-to-3d-windows.zip) · [Component terms](./THIRD_PARTY_NOTICES.md)
 
